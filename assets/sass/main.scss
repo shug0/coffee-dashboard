@@ -1,0 +1,32 @@
+/* --------------- MAIN.SCSS --------------- 
+
+	Catch all files 
+
+-------------------------------------------*/
+
+	@import "var";	
+	@import "reset";	
+	@import "steam";	
+	@import "palette";	
+
+// ------ COMPONENTS ----- \\
+						  
+	@import "_components/grid";	 
+	@import "_components/typography";  
+	@import "_components/animation";  
+
+// ------ PAGES ----- \\
+
+	@import "_pages/default.scss";
+	@import "_pages/login.scss";
+
+
+// ------ FONTS MATERIAL ----- \\
+
+	@import "_icons/material-design-iconic-font.scss";  
+
+
+// ------ WIDGET ----- \\
+	@import "_widget/weather.scss";
+
+// ------ MODULES ----- \\

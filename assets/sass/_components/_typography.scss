@@ -1,0 +1,30 @@
+// ------------------ TYPOGRAPHY ------------------ \\
+
+// ROBOTO WEBFONT PROVIDED BY GOOGLE ♥
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,100italic,400italic,500,500italic,700,700italic,900,900italic");
+
+$font: 'Roboto', Arial, sans-serif;
+
+
+// Placeholder Selectors For Fonts Weight & Style
+
+strong { 
+	@extend %bold;
+	@extend %uppercase;
+}
+
+%impact {
+	@extend %black;
+	@extend %uppercase;
+}
+
+%italic {font-style: italic;}
+%uppercase {text-transform: uppercase;}
+
+%thin {font-weight: 100;}
+%light {font-weight: 300;}
+%regular {font-weight: 400;}
+%medium {font-weight: 500;}
+%bold {font-weight: 700;}
+%black {font-weight: 900;}
+
