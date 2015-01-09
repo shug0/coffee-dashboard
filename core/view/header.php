@@ -10,8 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="<?php echo URL_WEB ?>assets/css/main.min.css">
 </head>
-<body>
-<i class="md-local-florist"></i>
+<body id ="<?php if(isset($simple_title)) { echo $simple_title; }; ?>">
+<i class="md-lo	cal-florist"></i>
+
+	<!--
 	<nav>
 		<ul>
 			<li><a href="?p=0">Home</a></li>
@@ -25,6 +27,6 @@
 
 		</ul>
 	</nav>
-
+	-->
 
 

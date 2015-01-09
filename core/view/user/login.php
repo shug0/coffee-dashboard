@@ -1,4 +1,4 @@
-<section id="login" class="container box appear">
+<section class="">
 
     <h1>Connexion :</h1>
 

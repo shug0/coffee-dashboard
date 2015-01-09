@@ -42,7 +42,8 @@ gulp.task('styles', function() {
     .pipe(autoprefixer())
     //.pipe(minifycss())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest(css_dir));
+    .pipe(gulp.dest(css_dir))
+    .pipe(reload({stream:true}));
   });
  
 // Scripts
@@ -53,7 +54,8 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest(javascripts_build))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
-    .pipe(gulp.dest(javascripts_build));
+    .pipe(gulp.dest(javascripts_build))
+    .pipe(reload({stream:true}));
   });
  
  
@@ -76,8 +78,11 @@ gulp.task('default', ['clean' , 'browser-sync'], function() {
 
   gulp.start('styles', 'scripts');
 
-  gulp.watch(sass_dir+"*.scss", ['styles', browserSync.reload]);
-  gulp.watch(javascripts_src+"*.js", ['scripts', browserSync.reload]);
+  gulp.watch(sass_dir+"*.scss", ['styles']);
+  gulp.watch(sass_dir+"*/*.scss", ['styles']);
+  gulp.watch(sass_dir+"*/*/*.scss", ['styles']);
+
+  gulp.watch(javascripts_src+"*.js", ['scripts']);
  
   gulp.watch(["*.php"]).on('change', browserSync.reload);
   gulp.watch(["*/*.php"]).on('change', browserSync.reload);

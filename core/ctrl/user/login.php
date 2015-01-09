@@ -1,6 +1,7 @@
 <?php 
 
-$the_title = 'Connexion';
+$the_title = 'Login';
+$simple_title =  strtolower($the_title);  
 $page_to_load = DIR_VIEW . 'user/login.php';
 
 include( VIEW_HEADER );
