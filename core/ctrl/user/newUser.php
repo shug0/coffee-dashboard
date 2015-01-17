@@ -2,18 +2,21 @@
 
 $the_title = 'Ajouter un utilisateur';
 
-// ADMIN - LOGGED VERIFICATION
+// ADMIN - LOGGED VERIFICATION 
+/*
 if (isset($_SESSION['session'])) {
-	if (!$_SESSION['session']->check()) {
+	if (!$_SESSION['session']->check_logged()) {
 		header('Location: index.php');      
 	}
 }
 else {header('Location: index.php');}
+*/
 
 // Connection to the database
 $db = new Database();
+
 if ($db->isConnected) {
-	$page_to_load = 'users/newUser.php';
+	$page_to_load = DIR_VIEW . 'user/newUser.php';
 }
 else {
 	$page_to_load = 'default.php';

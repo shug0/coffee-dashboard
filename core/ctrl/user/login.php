@@ -14,6 +14,12 @@ include( VIEW_FOOTER );
 
 	jQuery(document).ready(function($) {
 
+	// Centering all on the middle
+
+	center('section.login');
+
+
+
 	// Reset the style of button when click on input
 	$("input").click(function() {
 		$("#submit>.send").css("margin-top", "0");
@@ -35,7 +41,7 @@ include( VIEW_FOOTER );
             function(data){
             	// Switch 
 					function showMessage(message) {
-						$("#submit>.message").html(message);
+						$(".message").html(message);
 						$("#submit").addClass('alizarin');
 						$("#submit>.send").css("margin-top", "-50px");
 					}

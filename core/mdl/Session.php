@@ -2,9 +2,7 @@
 
 class Session 
 {
-	private $pseudo;
-	private $pwd;
-	private $isLog;
+	private $is_logged;
 
  	public function __construct($pseudo, $pwd) 
  	{
@@ -25,12 +23,12 @@ class Session
 
 			$_SESSION['pseudo'] = $pseudo;
 	        $_SESSION['hash'] = $newHash;
-			$this->isLog = true; 			
+			$this->is_logged = true; 			
 		}
   		$db->Disconnect();
  	}
 
-	public function check () 
+	public static function check_logged() 
 	{
 		if (isset($_SESSION['pseudo']) and isset($_SESSION['hash'])) 
 		{
@@ -47,16 +45,16 @@ class Session
 		else { return false; } 
 	}
 
-	public function isLog() 
+	public function is_logged() 
 	{  
-    	return $this->isLog;
+    	return $this->is_logged;
 	}
 
 	public function logout () 
 	{
 		session_unset ();  
 		session_destroy ();  
-		$this->isLog = false; 
+		$this->is_logged = false; 
 		return true;
 	}
 }

@@ -1,13 +1,13 @@
 <?php 
 
-define('URL_WEB', 'http://172.16.118.15:3000/coffee-dashboard/');
+define('URL_WEB', 'http://localhost/coffee-dashboard/');
 
 // ========== ID & PASS ========== 
 
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'coffee_ms');
-define('DB_USER', 'coffee_ms');
-define('DB_PASSWORD', 'MfC5XQ3fxD3QGEcq');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
 
 // ========== CORE ===============
  

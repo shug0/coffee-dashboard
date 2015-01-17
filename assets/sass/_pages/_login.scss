@@ -1,12 +1,12 @@
 // ------------------ LOGIN ------------------ \\
 
 body#login {
-	background-color: $colorBlueGrey50;
+	background-color: $colorGrayBackground;
 	section {
-		h1 {
-			font-size: 1.2em;
-			text-align: center;
-			margin-bottom: 30px;
+		max-width: 200px;
+		img {
+			max-width: 100%;
+			height: auto;
 		}
 	}
 }

@@ -1,5 +1,7 @@
 <?php 
 
+header("Access-Control-Allow-Origin: *"); 
+
 define('DIR_CONFIG',   'D:/Dev/www/coffee-dashboard/core/');
 
 require( DIR_CONFIG . 'config.php');
