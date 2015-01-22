@@ -1,5 +1,4 @@
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,100italic,400italic,500,500italic,700,700italic,900,900italic");
-@import url("http://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,100italic,400italic,500,500italic,700,700italic,900,900italic");
 /* --------------- MAIN.SCSS --------------- 
 
 	Catch all files 
@@ -53,38 +52,48 @@ html, body {
   position: relative; }
 
 /* line 9, D:/Dev/www/coffee-dashboard/assets/sass/steam */
+html {
+  background-color: #f0f0f0; }
+
+/* line 13, D:/Dev/www/coffee-dashboard/assets/sass/steam */
+body {
+  -webkit-transition: ease all 0.5s;
+          transition: ease all 0.5s;
+  opacity: 0; }
+
+/* line 18, D:/Dev/www/coffee-dashboard/assets/sass/steam */
 a, a:visited {
   text-decoration: none; }
 
-/* line 13, D:/Dev/www/coffee-dashboard/assets/sass/steam */
+/* line 22, D:/Dev/www/coffee-dashboard/assets/sass/steam */
 *, *:before, *:after {
   box-sizing: border-box; }
 
-/* line 20, D:/Dev/www/coffee-dashboard/assets/sass/steam */
+/* line 29, D:/Dev/www/coffee-dashboard/assets/sass/steam */
 .clearfix:before, .clearfix:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-/* line 24, D:/Dev/www/coffee-dashboard/assets/sass/steam */
+/* line 33, D:/Dev/www/coffee-dashboard/assets/sass/steam */
 .clearfix:after {
   clear: both; }
 
-/* line 25, D:/Dev/www/coffee-dashboard/assets/sass/steam */
+/* line 34, D:/Dev/www/coffee-dashboard/assets/sass/steam */
 .clearfix {
   *zoom: 1; }
 
-/* line 29, D:/Dev/www/coffee-dashboard/assets/sass/steam */
+/* line 38, D:/Dev/www/coffee-dashboard/assets/sass/steam */
 .none {
   display: none; }
 
-/* line 34, D:/Dev/www/coffee-dashboard/assets/sass/steam */
+/* line 43, D:/Dev/www/coffee-dashboard/assets/sass/steam */
 .hidden {
   display: none;
   visibility: hidden; }
 
-/* line 39, D:/Dev/www/coffee-dashboard/assets/sass/steam */
+/* line 48, D:/Dev/www/coffee-dashboard/assets/sass/steam */
 .invisible {
   visibility: hidden; }
 
@@ -120,15 +129,68 @@ a, a:visited {
   background-color: white;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1); }
 
-/* line 1, D:/Dev/www/coffee-dashboard/assets/sass/_components/ui */
-.btn {
-  padding: 10px; }
+/*
 
-/* line 22, D:/Dev/www/coffee-dashboard/assets/sass/_components/typography */
+colorBlue
+colorBlueSecondary
+colorGreen
+colorGreenSecondary
+colorRed
+colorRedSecondary
+colorYellow
+colorYellowSecondary
+colorRemember
+colorLearning
+
+*/
+/* line 19, D:/Dev/www/coffee-dashboard/assets/sass/_components/ui */
+input {
+  outline: 0;
+  width: 100%;
+  height: 45px;
+  padding: 12px;
+  color: rgba(0, 0, 0, 0.87);
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font: 16px 'Roboto', Arial, sans-serif;
+  margin-bottom: 10px; }
+  /* line 30, D:/Dev/www/coffee-dashboard/assets/sass/_components/ui */
+  input:focus {
+    border-color: #949494; }
+  /* line 31, D:/Dev/www/coffee-dashboard/assets/sass/_components/ui */
+  input.inputError {
+    border-color: #cb4437; }
+  /* line 35, D:/Dev/www/coffee-dashboard/assets/sass/_components/ui */
+  input + button {
+    margin-top: 10px; }
+
+/* line 38, D:/Dev/www/coffee-dashboard/assets/sass/_components/ui */
+button {
+  outline: 0;
+  border: 0;
+  width: 100%;
+  color: white;
+  height: 45px;
+  line-height: 42px;
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer; }
+  /* line 49, D:/Dev/www/coffee-dashboard/assets/sass/_components/ui */
+  button.blue {
+    background: #3372df; }
+  /* line 50, D:/Dev/www/coffee-dashboard/assets/sass/_components/ui */
+  button.green {
+    background: #0f9d58; }
+  /* line 51, D:/Dev/www/coffee-dashboard/assets/sass/_components/ui */
+  button.red {
+    background: #cb4437; }
+
+/* line 16, D:/Dev/www/coffee-dashboard/assets/sass/_components/typography */
 strong {
   text-transform: uppercase; }
 
-/* line 28, D:/Dev/www/coffee-dashboard/assets/sass/_components/typography */
+/* line 22, D:/Dev/www/coffee-dashboard/assets/sass/_components/typography */
 strong {
   font-weight: 700; }
 
@@ -149,16 +211,29 @@ body {
   opacity: 1;
   margin-top: 0; }
 
-/* line 3, D:/Dev/www/coffee-dashboard/assets/sass/_pages/login.scss */
-body#login {
-  background-color: #f0f0f0; }
-  /* line 5, D:/Dev/www/coffee-dashboard/assets/sass/_pages/login.scss */
-  body#login section {
-    max-width: 200px; }
-    /* line 7, D:/Dev/www/coffee-dashboard/assets/sass/_pages/login.scss */
-    body#login section img {
-      max-width: 100%;
-      height: auto; }
+/* line 4, D:/Dev/www/coffee-dashboard/assets/sass/_pages/login.scss */
+body#login section {
+  max-width: 260px; }
+  /* line 6, D:/Dev/www/coffee-dashboard/assets/sass/_pages/login.scss */
+  body#login section img {
+    max-width: 100%;
+    height: auto; }
+  /* line 10, D:/Dev/www/coffee-dashboard/assets/sass/_pages/login.scss */
+  body#login section input#pseudo, body#login section input#submit, body#login section div.send {
+    -webkit-transition: all ease 0.2s;
+            transition: all ease 0.2s; }
+  /* line 11, D:/Dev/www/coffee-dashboard/assets/sass/_pages/login.scss */
+  body#login section .error {
+    display: none;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 0.9em;
+    font-family: 'Roboto', Arial, sans-serif; }
+    /* line 17, D:/Dev/www/coffee-dashboard/assets/sass/_pages/login.scss */
+    body#login section .error:before {
+      color: #cb4437;
+      padding-right: 10px;
+      font-family: 'Material Design Iconic Font'; }
 
 @font-face {
   font-family: 'Material Design Iconic Font';

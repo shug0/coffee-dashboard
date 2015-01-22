@@ -6,6 +6,15 @@ html, body {
 	position: relative;
 }
 
+html {
+	background-color: $colorGrayBackground;
+}
+
+body {
+	transition: ease all 0.5s;
+	opacity: 0;
+}
+
 a, a:visited { text-decoration: none; }
 
 // ----- PADDING ARE NICE NOW ! 

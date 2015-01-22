@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="<?php echo URL_WEB ?>assets/css/main.min.css">
 </head>
 <body id ="<?php if(isset($simple_title)) { echo $simple_title; }; ?>">
-<i class="md-lo	cal-florist"></i>
 
 	<!--
 	<nav>

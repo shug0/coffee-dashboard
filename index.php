@@ -9,8 +9,13 @@
 	include( DIR_TOOLS . 'PassHash.php' );
 	session_start();
 
-	if (Session::check_logged()) {
-		include(DIR_CTL . 'default.php');
+	if (isset($_SESSION['session'])) {
+		if ($_SESSION['session']->is_logged()) {
+			include(DIR_CTL . 'dashboard.php');
+		}
+		else {
+			header('Location: http://thatsthefinger.com/');
+		}
 	}
 	else {
 		include(DIR_CTL . 'user/login.php');

@@ -38,12 +38,12 @@ if ($db->isConnected)
 			        		$db->Disconnect();
 			                echo "Success";
 			        	}
-			        	else { $db->Disconnect(); echo "badPassword";  }
+			        	//else { $db->Disconnect(); echo "badPassword";  }
 			        }
 			        elseif (empty($_POST['pseudo']) && empty($_POST['password'])) { $db->Disconnect(); echo "allEmpty"; }
 			        elseif (empty($_POST['pseudo']) AND !empty($_POST['password'])) { $db->Disconnect(); echo "pseudoEmpty"; }
 			        elseif (!empty($_POST['pseudo']) AND empty($_POST['password'])) { $db->Disconnect(); echo "passwordEmpty"; }
-			        else { $db->Disconnect(); echo "badPseudo"; }
+			        //else { $db->Disconnect(); echo "badPseudo"; }
 			    }
 				break;
 			

@@ -1,12 +1,24 @@
 // ------------------ LOGIN ------------------ \\
 
 body#login {
-	background-color: $colorGrayBackground;
 	section {
-		max-width: 200px;
+		max-width: 260px;
 		img {
 			max-width: 100%;
 			height: auto;
+		}
+		input#pseudo, input#submit, div.send  { transition: all ease 0.2s; }
+		.error {
+			display: none;
+			text-align: center;
+			padding-top: 10px;
+			font-size: 0.9em;
+			font-family: $fontDefault;
+			&:before { 
+				color: $colorRed;
+				padding-right: 10px;
+				font-family: 'Material Design Iconic Font';
+			}
 		}
 	}
 }
