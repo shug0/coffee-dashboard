@@ -18,8 +18,11 @@
 		}
 	}
 	else {
-		include(DIR_CTL . 'user/login.php');
+		//include(DIR_CTL . 'user/login.php');
+		include(DIR_CTL . 'dashboard.php');
+
 	}
+
 
 ?>
 	

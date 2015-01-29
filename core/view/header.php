@@ -10,20 +10,5 @@
 </head>
 <body id ="<?php if(isset($simple_title)) { echo $simple_title; }; ?>">
 
-	<!--
-	<nav>
-		<ul>
-			<li><a href="?p=0">Home</a></li>
-
-			<?php if (isset($_SESSION['session']) and isset($_SESSION['pseudo']) and isset($_SESSION['hash'])): ?>
-				<li><a href="?p=1">Admin</a></li>
-	    		<li><a href='?p=99'>Logout</a></li>
-			<?php else: ?>
-    			<li><a href="?p=2">Login</a></li>
-			<?php endif ?>
-
-		</ul>
-	</nav>
-	-->
 
 
