@@ -14,8 +14,8 @@ class Database {
 	    } 
 	    catch(PDOException $e) { 
 	        $this->isConnected = false;
-	        throw new Exception($e->getMessage());
-            echo "Erreur sur la connexion à la base :" . $e;
+            echo "Erreur sur la connexion a la base :" . $e;
+            throw new Exception($e->getMessage());
 	    }
 	}
 
@@ -51,7 +51,7 @@ class Database {
             $stmt->execute($params);
             return true;
             } catch(PDOException $e) {
-            //throw new Exception($e->getMessage());
+            throw new Exception($e->getMessage());
             return false;
         }           
     }

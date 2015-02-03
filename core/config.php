@@ -4,14 +4,14 @@ define('URL_WEB', 'http://localhost/coffee-dashboard/');
 
 // ========== ID & PASS ========== 
 
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'coffee_ms');
-define('DB_USER', 'root');
-define('DB_PASSWORD', '');
+define('DB_HOST', 'mugen.tetaneutral.net');
+define('DB_NAME', 'coffee_dashboard');
+define('DB_USER', 'coffee_dashboard');
+define('DB_PASSWORD', 'ChQeP2BKAAhbXs6V');
 
 // ========== CORE ===============
  
-define('DIR_BASE',   'D:/Dev/www/coffee-dashboard/');
+define('DIR_BASE',   'C:/wamp/www/coffee-dashboard/');
 define('DIR_SYSTEM', DIR_BASE . 'core/');
 
 define('DIR_VIEW', DIR_SYSTEM . 'view/');

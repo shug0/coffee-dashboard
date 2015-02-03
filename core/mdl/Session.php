@@ -7,15 +7,15 @@ class Session
  	public function __construct($pseudo, $pwd) 
  	{
 		$db = new Database();
-		$hashUserInDB = $db->getRow('SELECT password FROM USERS WHERE pseudo = :pseudo', array(':pseudo' => $pseudo));
+		$hashUserInDB = $db->getRow('SELECT user_pass FROM users WHERE user_login = :pseudo', array(':pseudo' => $pseudo));
 
-		if (PassHash::check_password($hashUserInDB['password'], $pwd)) {
+		if (PassHash::check_password($hashUserInDB['user_pass'], $pwd)) {
 
 			$newHash = PassHash::hash($pwd);
 			$db->updateRow(
-			'UPDATE USERS 
-			 SET password = :password
-			 WHERE pseudo = :pseudo',
+			'UPDATE users 
+			 SET user_pass = :password
+			 WHERE user_login = :pseudo',
 			 array(
 			 	':pseudo' => $pseudo,
 			 	':password' => $newHash 
@@ -33,7 +33,7 @@ class Session
 		if (isset($_SESSION['pseudo']) and isset($_SESSION['hash'])) 
 		{
 			$db = new Database();
-			$hashUserInDB = $db->getRow('SELECT password FROM USERS WHERE pseudo = :pseudo', array(':pseudo' => $_SESSION['pseudo']));
+			$hashUserInDB = $db->getRow('SELECT user_pass FROM users WHERE user_login = :pseudo', array(':pseudo' => $_SESSION['pseudo']));
 
     		if ($_SESSION['hash'] == $hashUserInDB['password'] ) 
     		{

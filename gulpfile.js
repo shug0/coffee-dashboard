@@ -67,7 +67,7 @@ gulp.task('clean', function(cb) {
 
 gulp.task('browser-sync', function() {
     browserSync({
-        proxy: "192.168.56.1:888",
+        proxy: "localhost",
         startPath: "coffee-dashboard/index.php",
     });
 });

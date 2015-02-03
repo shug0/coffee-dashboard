@@ -11,8 +11,8 @@ html {
 }
 
 body {
-	transition: ease all 0.5s;
 	opacity: 0;
+	transition: all 1s $animationEasing;
 }
 
 a, a:visited { text-decoration: none; }
