@@ -1,5 +1,5 @@
 #Personal File
-core/config
+config.php
 
 # Windows image file caches
 Thumbs.db

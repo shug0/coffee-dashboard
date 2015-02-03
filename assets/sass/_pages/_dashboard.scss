@@ -1,48 +1,16 @@
 // ------------------ DASHBOARD ------------------ \\
 
+body {
+
+}
+
 aside {
-	h1 {
-		background: url(../img/background_logo_sidebar.jpg);
-		height: 144px;
-		text-align: center;
-		padding: 18px 0;
-		margin-bottom: 40px;
-		img {
-			width: 100px;
-			height: auto;
-			display: inline-block;
-		}
-	}
-	nav {
-		a {
-			color: $colorText;
-			font-family: $fontDefault;
-			font-weight: 400;
-			font-size: 1.1em;
-			padding: 10px;
-		}
-		ul { 
-			padding: 0 25px; 
-			li {
-				margin-bottom: 25px;
-			}
-			li:before {
-				margin-right: 15px;
-				color: $colorText;
-				font-size: 1.6em;
-			}
-		}
-		
-	}
 	top: -50px;
+	left: 0;
 	position: fixed;
 	height: 120%;
-	width: $sidebarWidth;
+	width: 250px;
 	padding-top: 50px;
 	background: white;
 	@extend .level4; 
-}
-
-#content {
-	padding: 144px 100px 0 350px;
 }

@@ -2,7 +2,11 @@
 
 $the_title = 'Login';
 $simple_title =  strtolower($the_title);  
-include( DIR_VIEW . 'user/login.php' );
+$page_to_load = DIR_VIEW . 'user/login.php';
+
+include( VIEW_HEADER );
+include( $page_to_load );
+include( VIEW_FOOTER );
 
 ?>
 
@@ -12,7 +16,7 @@ include( DIR_VIEW . 'user/login.php' );
 
 	// Centering all on the middle
 
-	center('section#login');
+	center('section.login');
 
 	// Reset the style of button when click on input
 	$("input").click(function() {
@@ -40,6 +44,7 @@ include( DIR_VIEW . 'user/login.php' );
 						$(".error").html(message).fadeIn('400');
 						$("#submit").addClass('red');
 					}
+
             	switch (data) 
             	{
 					// function for show Error message
@@ -67,6 +72,7 @@ include( DIR_VIEW . 'user/login.php' );
 			    		$('input#password').addClass('inputError');	
 			    		$(".error").addClass('md-error');
 	    					    		break;
+
 			    	default:
 			    		showMessage("Le pseudo ou le mot de passe saisi est incorrect.");
 			    		$(".error").addClass('md-error');

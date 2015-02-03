@@ -1,4 +1,4 @@
-<section id="login">
+<section class="login">
 
     <h1><img src="assets/img/verde_nero_logo.png" alt=""></h1>
 

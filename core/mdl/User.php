@@ -16,7 +16,7 @@ class User
 
  	public function createDbUser () {
 		if ($this->db->insertRow(
-			'INSERT INTO users (user_login, user_pass) 
+			'INSERT INTO USERS (pseudo, password) 
 			 VALUES (:pseudo,:password)',
 			 array(
 			 	':pseudo' => $this->pseudo,

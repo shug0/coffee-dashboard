@@ -1,22 +1,24 @@
 // ------------------ LOGIN ------------------ \\
 
-#login {
-	max-width: 260px;
-	img {
-		max-width: 100%;
-		height: auto;
-	}
-	div.send  { transition: all ease 0.2s; }
-	.error {
-		display: none;
-		text-align: center;
-		padding-top: 10px;
-		font-size: 0.9em;
-		font-family: $fontDefault;
-		&:before { 
-			color: $colorRed;
-			padding-right: 10px;
-			font-family: 'Material Design Iconic Font';
+body#login {
+	section {
+		max-width: 260px;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		input#pseudo, input#submit, div.send  { transition: all ease 0.2s; }
+		.error {
+			display: none;
+			text-align: center;
+			padding-top: 10px;
+			font-size: 0.9em;
+			font-family: $fontDefault;
+			&:before { 
+				color: $colorRed;
+				padding-right: 10px;
+				font-family: 'Material Design Iconic Font';
+			}
 		}
 	}
 }
