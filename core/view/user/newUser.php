@@ -1,4 +1,4 @@
-<section id="login" class="container box appear">
+<section id="login" class="container box">
 
     <h1>Ajouter un utilisateur :</h1>
 

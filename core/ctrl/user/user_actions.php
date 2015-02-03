@@ -2,13 +2,12 @@
 
 header("Access-Control-Allow-Origin: *"); 
 
-define('DIR_CONFIG',   'D:/Dev/www/coffee-dashboard/core/');
+define('DIR_CONFIG','C:/wamp/www/coffee-dashboard/core/');
 
 require( DIR_CONFIG . 'config.php');
 include( DIR_TOOLS . 'PassHash.php' );
-include( DIR_MDL . 'Session.php' );
-include( DIR_MDL . 'Database.php' );
-include( DIR_MDL . 'User.php' );
+
+function __autoload($class_name) { include DIR_MDL . $class_name . '.php'; }
 
 session_start();
 
@@ -28,11 +27,11 @@ if ($db->isConnected)
 				
 				if( isset($_POST['pseudo']) && isset($_POST['password']) ){	
 
-			    	$result = $db->getRow('SELECT password FROM USERS WHERE pseudo = :pseudo', array(':pseudo' => $_POST['pseudo']));
+			    	$result = $db->getRow('SELECT user_pass FROM users WHERE user_login = :pseudo', array(':pseudo' => $_POST['pseudo']));
 
 			        if(!empty($result)) 
 			        {
-			        	if (PassHash::check_password($result['password'], $_POST['password'])) 
+			        	if (PassHash::check_password($result['user_pass'], $_POST['password'])) 
 			        	{
 			                $_SESSION['session'] = new Session($_POST['pseudo'], $_POST['password']);
 			        		$db->Disconnect();

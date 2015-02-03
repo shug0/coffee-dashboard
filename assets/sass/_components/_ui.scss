@@ -26,12 +26,11 @@ input {
 	border-radius: 5px;
 	font: $fontBase $fontDefault;
 	margin-bottom: 10px;
-
+	transition: all $animationEasing 0.2s;
 	&:focus { border-color: darken($colorGrayKeyline, 30); }
 	&.inputError {
 		border-color: $colorRed;
 	}
-
 	&+button { margin-top: 10px; }
 }
 
