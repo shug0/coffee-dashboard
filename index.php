@@ -1,6 +1,7 @@
 <?php 
 
-	define('DIR_CONFIG','C:/wamp/www/coffee-dashboard/core/');
+	define('DIR_CONFIG', __DIR__ . '/core/');
+	
 	include_once(DIR_CONFIG . 'config.php');
 	include_once(DIR_TOOLS . 'PassHash.php' );
 
@@ -12,7 +13,7 @@
 
 	if (isset($_SESSION['session'])) {
 		if ($_SESSION['session']->is_logged()) {
-			header('Location: dashboard.php');
+			header('Location: ' . URL_WEB . 'dashboard.php');
 		}
 		else {
 			header('Location: http://thatsthefinger.com/');

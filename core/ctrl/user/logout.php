@@ -1,6 +1,6 @@
 <?php 
 
-define('DIR_CONFIG','C:/wamp/www/coffee-dashboard/core/');
+define('DIR_CONFIG', dirname(dirname(__DIR__)) . "\\");
 include_once(DIR_CONFIG . 'config.php');
 function __autoload($class_name) { include DIR_MDL . $class_name . '.php'; }
 session_start();

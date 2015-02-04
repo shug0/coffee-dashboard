@@ -7,18 +7,17 @@ define('URL_WEB', 'http://localhost/coffee-dashboard/');
 define('DB_HOST', 'mugen.tetaneutral.net');
 define('DB_NAME', 'coffee_dashboard');
 define('DB_USER', 'coffee_dashboard');
-define('DB_PASSWORD', 'NpFc2xczbBpKrZ3r');
+define('DB_PASSWORD', '4RrNXHNcJdyjAP26');
 
 // ========== CORE ===============
  
-define('DIR_BASE',   'C:/wamp/www/coffee-dashboard/');
-define('DIR_SYSTEM', DIR_BASE . 'core/');
+define('DIR_CORE',   __DIR__);
 
-define('DIR_VIEW', DIR_SYSTEM . 'view/');
+define('DIR_VIEW', DIR_CORE . '/view/');
 
-define('DIR_CTL', DIR_SYSTEM . 'ctrl/');
-define('DIR_MDL', DIR_SYSTEM . 'mdl/');
-define('DIR_TOOLS', DIR_SYSTEM . 'tools/');
+define('DIR_CTL', DIR_CORE . '/ctrl/');
+define('DIR_MDL', DIR_CORE . '/mdl/');
+define('DIR_TOOLS', DIR_CORE . '/tools/');
 
 
 // ========== VIEWS ==============

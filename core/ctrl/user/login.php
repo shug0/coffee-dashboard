@@ -66,7 +66,7 @@ include( DIR_VIEW . 'user/login.php' );
 			    		showMessage("Le champ mot de passe n'est pas rempli");
 			    		$('input#password').addClass('inputError');	
 			    		$(".error").addClass('md-error');
-	    					    		break;
+	    				break;
 			    	default:
 			    		showMessage("Le pseudo ou le mot de passe saisi est incorrect.");
 			    		$(".error").addClass('md-error');

@@ -1,6 +1,6 @@
 <?php 
 
-	define('DIR_CONFIG','C:/wamp/www/coffee-dashboard/core/');
+	define('DIR_CONFIG', __DIR__ . '/core/');
 	include_once(DIR_CONFIG . 'config.php');
 	include_once(DIR_TOOLS . 'PassHash.php' );
 
@@ -29,7 +29,7 @@
 		else {	include_once(DIR_CTL . 'dashboard/dashboard.php');	}
 	}} // END SECURED AREA
 	else {
-		header('Location: index.php');
+		header('Location: ' . URL_WEB . 'index.php');
 	}
 
 	include( VIEW_FOOTER );

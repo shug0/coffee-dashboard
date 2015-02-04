@@ -2,8 +2,7 @@
 
 header("Access-Control-Allow-Origin: *"); 
 
-define('DIR_CONFIG','C:/wamp/www/coffee-dashboard/core/');
-
+define('DIR_CONFIG', dirname(dirname(__DIR__)) . "\\");
 require( DIR_CONFIG . 'config.php');
 include( DIR_TOOLS . 'PassHash.php' );
 
@@ -15,7 +14,6 @@ $db = new Database();
 
 if ($db->isConnected) 
 {
-
 	if (isset($_POST['action'])) {
 
 		switch ($_POST['action']) {
