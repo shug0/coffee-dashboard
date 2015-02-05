@@ -2,6 +2,7 @@
 
 $the_title = 'Login';
 $simple_title =  strtolower($the_title);  
+echo('<script>$("title").html("'. $the_title .'")</script>');
 include( DIR_VIEW . 'user/login.php' );
 
 ?>
@@ -11,7 +12,6 @@ include( DIR_VIEW . 'user/login.php' );
 	jQuery(document).ready(function($) {
 
 	// Centering all on the middle
-
 	center('section#login');
 
 	// Reset the style of button when click on input

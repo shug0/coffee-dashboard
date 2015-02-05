@@ -1,7 +1,7 @@
 function changingPage() {
-  $('body').css('opacity', '0');
+  $('main').css('opacity', '0');
 }
 
 function enterPage() {
-  $('body').css('opacity', '1');
+  $('main').css('opacity', '1');
 }

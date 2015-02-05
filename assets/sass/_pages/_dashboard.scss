@@ -46,3 +46,13 @@ aside {
 #content {
 	padding: 144px 100px 0 350px;
 }
+
+
+.gridster {
+	width: 1px;
+	li {
+		background: white;
+		border-radius: 3px;
+		@extend .level1;
+	}
+}

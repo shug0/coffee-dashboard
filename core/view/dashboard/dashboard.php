@@ -1,6 +1,9 @@
 <section id="content">
 	
-	Hello
+  <div class="gridster">
+    <ul>
+
+    </ul>
+  </div>
 
 </section>
-

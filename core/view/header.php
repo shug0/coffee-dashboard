@@ -26,3 +26,5 @@
 		</aside>
 
 	<?php endif ?>
+
+	<main>

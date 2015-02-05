@@ -4,10 +4,18 @@ define('URL_WEB', 'http://localhost/coffee-dashboard/');
 
 // ========== ID & PASS ========== 
 
-define('DB_HOST', 'mugen.tetaneutral.net');
+/*
+define('DB_HOST', '91.224.149.9');
 define('DB_NAME', 'coffee_dashboard');
 define('DB_USER', 'coffee_dashboard');
 define('DB_PASSWORD', '4RrNXHNcJdyjAP26');
+*/
+
+// MARS
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'coffee_dashboard');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
 
 // ========== CORE ===============
  
