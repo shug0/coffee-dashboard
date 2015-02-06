@@ -1,10 +1,10 @@
 // ------------------ GRID ------------------ \\
 
-.level1 { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-.level2 { box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); }
-.level3 { box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); }
-.level4 { box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); }
-.level5 { box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); }   
+.level1 { box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.12); }
+.level2 { box-shadow: 0 3px 6px rgba(0,0,0,0.07), 0 3px 6px rgba(0,0,0,0.11); }
+.level3 { box-shadow: 0 10px 20px rgba(0,0,0,0.11), 0 6px 6px rgba(0,0,0,0.11); }
+.level4 { box-shadow: 0 14px 28px rgba(0,0,0,0.13), 0 10px 10px rgba(0,0,0,0.10); }
+.level5 { box-shadow: 0 19px 38px rgba(0,0,0,0.15), 0 15px 12px rgba(0,0,0,0.10); }   
 
 
 .container {
@@ -15,12 +15,15 @@
 .left {float:left;}
 .right {float:right;}
 
-.col2 {
-	width: 50%;
-}
-
-.box {
-	padding: 40px;
-	background-color: white;
-	box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1)
+@media (min-width: 40rem) {
+  .column {
+    float: left;
+  }
+  
+  .full 		 		{ @extend .column; width: 100%; }
+  .two-thirds 		{ @extend .column; width: 66.7%; }
+  .half 				{ @extend .column; width: 50%; }
+  .third 			{ @extend .column; width: 33.3%; }
+  .fourth 			{ @extend .column; width: 25%; }
+  .flow-opposite 	{ @extend .column; float: right; }  
 }

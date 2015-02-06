@@ -49,10 +49,20 @@ aside {
 
 
 .gridster {
-	width: 1px;
+	width: auto;
 	li {
+		overflow: hidden;
+		header {
+			width: 200%;
+			height: 30px;
+			cursor: move;
+			margin: 0 -30px;
+		}
 		background: white;
 		border-radius: 3px;
-		@extend .level1;
+		padding: 0 30px;
+		transition: all 0.3s $animationEasing;
+		@extend .level2;
+		&:active { @extend .level4; }
 	}
 }

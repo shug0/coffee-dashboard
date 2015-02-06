@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
+<g>
+	<circle fill="#ECEFF1" cx="200" cy="201" r="110.3"/>
+	<circle fill="#CFD8DC" cx="163" cy="131.7" r="12"/>
+	<circle fill="#CFD8DC" cx="219.4" cy="157.1" r="19.5"/>
+	<circle fill="#CFD8DC" cx="139.7" cy="193.2" r="12"/>
+	<circle fill="#CFD8DC" cx="222" cy="291.1" r="8.6"/>
+	<g>
+		<defs>
+			<circle id="SVGID_7_" cx="200" cy="201" r="110.3"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_7_"  overflow="visible"/>
+		</clipPath>
+		<circle clip-path="url(#SVGID_2_)" fill="#CFD8DC" cx="305.2" cy="248.8" r="19.2"/>
+		<circle clip-path="url(#SVGID_2_)" fill="#CFD8DC" cx="177" cy="296.3" r="24.9"/>
+	</g>
+</g>
+</svg>

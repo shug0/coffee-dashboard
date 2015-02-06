@@ -15,10 +15,10 @@ strong {
 %italic {font-style: italic;}
 %uppercase {text-transform: uppercase;}
 
-%thin {font-weight: 100;}
-%light {font-weight: 300;}
-%regular {font-weight: 400;}
-%medium {font-weight: 500;}
-%bold {font-weight: 700;}
-%black {font-weight: 900;}
+$thin : 100;
+$light : 300;
+$regular : 400;
+$medium : 500;
+$bold : 700;
+$black : 900;
 

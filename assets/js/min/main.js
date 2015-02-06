@@ -7,6 +7,8 @@ function enterPage() {
 }
 // POSITION
 
+// ADJUST HORIZONTAL & VERTICAL CENTER ♥
+
 function center(selector) {
 
 	$(window).resize(function(){
