@@ -64,7 +64,7 @@
 
 					BACKstart = "<figure class='face back'><header></header>",
 					label = "<form><label for='city'>Ville :</label>",
-					input = "<input name='city'/>",
+					input = "<input id='city' name='city'/>",
 					submit = "<button type='submit' class='blue'>Valider</button></form>"
 					BACKend = "</figure>",
 
@@ -81,6 +81,8 @@
 
 
 
+
+
 				$('html').click(function(event) {
 					if(!$(event.target).closest('.card').length) {
 				    	$('.card').removeClass('flipped');
@@ -93,17 +95,41 @@
 				});
 
 
-
-
-
-
-
 				$('#weather > figure.face.back > form > button').click(function(e) {
+
 					e.preventDefault();
+					var city = $('#weather>figure.face.back>form>input').val();
+
+					$.post(
+					'<?php echo URL_WEB . "core/ctrl/dashboard/dashboard_actions.php" ?>',
+					{
+		            	city: $('#city').val(), 
+		            	action: 'city'
+		            },
+		            function(data){
+		            	switch (data) 
+		            	{
+							case 'Success':		
+					    		alert('Good');
+					    	break;
+
+					    	case 'empty':
+					    		alert('Champ vide')
+					    	break;
+
+					    	case 'badDatabase':
+					    		alert('Erreur inconnu');
+							break;
+					    	
+					    	default:
+					    		alert('Erreur yolo');
+						    }
+						},'text' 
+					);
+
 				});
 			}
 	    });
-
 
 
 	    </script>

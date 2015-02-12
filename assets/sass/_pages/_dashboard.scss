@@ -65,8 +65,8 @@ aside {
 		}
 	}
 	.card.flipped { 
-		transform: rotateY(-180deg) translateY(-20px) scale(1.08);
-		@extend .level4; 
+		transform: rotateY(-180deg) translateY(-20px) scale(1.2);
+		@extend .level6; 
 	}
 	.card {	
 		-webkit-transform-style: preserve-3d; 

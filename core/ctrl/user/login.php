@@ -23,7 +23,7 @@ include( DIR_VIEW . 'user/login.php' );
 	
 	// When we click on "send button"
 	$("#submit").click(function(e) {
-		e.preventDefault()
+		e.preventDefault();
 		$.post(
 			// Path for the PHP script to execute with ajax
 			'<?php echo URL_WEB . "core/ctrl/user/user_actions.php" ?>',

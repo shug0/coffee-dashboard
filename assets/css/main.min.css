@@ -110,62 +110,66 @@ a, a:visited {
 /* ==========  Color definitions  ========== */
 /* line 3, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
 .level1 {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12); }
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.08); }
 
 /* line 4, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
 .level2, .gridster li {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.07), 0 3px 6px rgba(0, 0, 0, 0.11); }
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.07), 0 3px 6px rgba(0, 0, 0, 0.08); }
 
 /* line 5, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
 .level3 {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.11), 0 6px 6px rgba(0, 0, 0, 0.11); }
+  box-shadow: 0 7px 9px rgba(0, 0, 0, 0.09), 0 6px 9px rgba(0, 0, 0, 0.08); }
 
 /* line 6, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
-.level4, aside, .gridster li:active, .gridster .card.flipped {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.13), 0 10px 10px rgba(0, 0, 0, 0.1); }
+.level4, aside, .gridster li:active {
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.09), 0 9px 12px rgba(0, 0, 0, 0.08); }
 
 /* line 7, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
 .level5 {
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.15), 0 15px 12px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 15px 16px rgba(0, 0, 0, 0.09), 0 12px 15px rgba(0, 0, 0, 0.08); }
 
-/* line 10, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
+/* line 8, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
+.level6, .gridster .card.flipped {
+  box-shadow: 0 18px 19px rgba(0, 0, 0, 0.09), 0 14px 25px rgba(0, 0, 0, 0.08); }
+
+/* line 11, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
 .container {
   margin: 0 auto;
   width: 90%; }
 
-/* line 15, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
+/* line 16, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
 .left {
   float: left; }
 
-/* line 16, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
+/* line 17, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
 .right {
   float: right; }
 
-/* line 18, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
+/* line 19, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
 .column, .full, .two-thirds, .half, .third, .fourth, .flow-opposite {
   float: left; }
 
-/* line 22, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
+/* line 23, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
 .full {
   width: 100%; }
 
-/* line 23, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
+/* line 24, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
 .two-thirds {
   width: 66.7%; }
 
-/* line 24, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
+/* line 25, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
 .half {
   width: 50%; }
 
-/* line 25, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
+/* line 26, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
 .third {
   width: 33.3%; }
 
-/* line 26, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
+/* line 27, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
 .fourth {
   width: 25%; }
 
-/* line 27, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
+/* line 28, D:/Dev/www/coffee-dashboard/assets/sass/_components/grid */
 .flow-opposite {
   float: right; }
 
@@ -345,8 +349,8 @@ aside {
       cursor: pointer; }
   /* line 67, D:/Dev/www/coffee-dashboard/assets/sass/_pages/dashboard.scss */
   .gridster .card.flipped {
-    -webkit-transform: rotateY(-180deg) translateY(-20px) scale(1.08);
-            transform: rotateY(-180deg) translateY(-20px) scale(1.08); }
+    -webkit-transform: rotateY(-180deg) translateY(-20px) scale(1.2);
+            transform: rotateY(-180deg) translateY(-20px) scale(1.2); }
   /* line 71, D:/Dev/www/coffee-dashboard/assets/sass/_pages/dashboard.scss */
   .gridster .card {
     -webkit-transform-style: preserve-3d; }

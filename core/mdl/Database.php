@@ -31,8 +31,8 @@ class Database {
                 $stmt->execute($params);
                 return $stmt->fetch();  
                 }catch(PDOException $e){
-                throw new Exception($e->getMessage());
                 echo 'Erreur :' . $e;
+                throw new Exception($e->getMessage());
             }
         }
     public function getRows($query, $params=array()){
