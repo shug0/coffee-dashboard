@@ -23,16 +23,13 @@ aside {
 		}
 		ul { 
 			padding: 0 25px; 
-			li {
-				margin-bottom: 25px;
-			}
+			li { margin-bottom: 25px; }
 			li:before {
 				margin-right: 15px;
 				color: $colorText;
 				font-size: 1.6em;
 			}
-		}
-		
+		}		
 	}
 	top: -50px;
 	position: fixed;
@@ -43,26 +40,60 @@ aside {
 	@extend .level4; 
 }
 
-#content {
-	padding: 144px 100px 0 350px;
-}
-
+#content { padding: 144px 100px 0 350px; }
 
 .gridster {
 	width: auto;
 	li {
-		overflow: hidden;
 		header {
-			width: 200%;
-			height: 30px;
+			width: 100%;
+			height: 40px;
 			cursor: move;
-			margin: 0 -30px;
 		}
-		background: white;
 		border-radius: 3px;
-		padding: 0 30px;
 		transition: all 0.3s $animationEasing;
 		@extend .level2;
 		&:active { @extend .level4; }
+		.md-more-horiz:before {
+			right: 10px;
+			bottom: 0px;
+			font-size: 2em;
+			position: absolute;
+			color: darken($colorGrayKeyline, 10);
+			padding: 10px;
+			cursor: pointer;
+		}
+	}
+	.card.flipped { 
+		transform: rotateY(-180deg);
+		@extend .level4; 
+	}
+	.card {	
+		-webkit-transform-style: preserve-3d; 
+	}
+	.card .face {
+		padding: 0 30px;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		-webkit-backface-visibility: hidden ;
+	}
+	.card .front {
+		z-index: 1;
+		background: white;
+		color: white;
+	}
+	.card .back {
+		-webkit-transform: rotateY(-180deg);
+		background: white;
+		color: black;
 	}
 }
+
+
+
+
+

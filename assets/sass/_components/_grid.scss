@@ -15,15 +15,13 @@
 .left {float:left;}
 .right {float:right;}
 
-@media (min-width: 40rem) {
-  .column {
-    float: left;
-  }
-  
-  .full 		 		{ @extend .column; width: 100%; }
-  .two-thirds 		{ @extend .column; width: 66.7%; }
-  .half 				{ @extend .column; width: 50%; }
-  .third 			{ @extend .column; width: 33.3%; }
-  .fourth 			{ @extend .column; width: 25%; }
-  .flow-opposite 	{ @extend .column; float: right; }  
+.column {
+  float: left;
 }
+
+.full 		 		{ @extend .column; width: 100%; }
+.two-thirds 		{ @extend .column; width: 66.7%; }
+.half 				{ @extend .column; width: 50%; }
+.third 			{ @extend .column; width: 33.3%; }
+.fourth 			{ @extend .column; width: 25%; }
+.flow-opposite 	{ @extend .column; float: right; }  

@@ -26,7 +26,7 @@
 
 	        // METEO
 
-	        var city = 'Vancouver'; //$('input[name="ville"]').val();
+	        var city = 'Tokyo'; //$('input[name="ville"]').val();
 
 			if (city) {
 
@@ -40,6 +40,8 @@
 							dataWeather[2].responseJSON,
 							dataForecast[2].responseJSON
 						);	
+						console.log(dataWeather[2].responseJSON);
+						console.log(dataForecast[2].responseJSON);
 					};	
 				});
 				
@@ -50,25 +52,44 @@
 
 			function initWeatherWidget(weather, forecast) {
 
-				var start = '<li id="weather">',
-					FRONTstart = "<figure class='front><header></header>",
-					icon = "<div class='half'><img src='assets/modules/weather/" + weather.weather[0].icon + ".svg'></div>",
+				var start = '<li class="card" id="weather">',
+					FRONTstart = "<figure class='face front'><header></header>",
+					icon = "<div class='half'><img class='weatherIcon' src='assets/modules/weather/" + weather.weather[0].icon + ".svg'></div>",
 					temp = "<div class='half temp'>" + Math.round(getCelsius(weather.main.temp)) + "°</div>",
 					descriptionNice = weather.weather[0].description.charAt(0).toUpperCase() + weather.weather[0].description.substring(1).toLowerCase(),
+					ville = "<div class='full city'>" + weather.name + "</div>",
 					description = "<div class='full description'>" + descriptionNice + "</div>",
-					ville = "<div class='full description'>" + weather.name + "</div>",
+					option = "<i class='md-more-horiz'></i>",
 					FRONTend = "</figure>",
-					BACKstart = "<figure class='back'>",
+
+					BACKstart = "<figure class='face back'><header></header>",
+					label = "<form><label for='city'>Ville :</label>",
+					input = "<input name='city'/>",
+					submit = "<button type='submit' class='blue'>Valider</button></form>"
 					BACKend = "</figure>",
+
 					end = "</li>";
 
-	        	gridster.add_widget(start+FRONTstart+icon+temp+description+ville+FRONTend+end, 3, 3);
+	        	gridster.add_widget(
+	        		start+
+	        		FRONTstart+icon+temp+ville+description+option+FRONTend+
+	        		BACKstart+label+input+submit+BACKend+
+	        		+end
+	        		, 
+	        		3, 4
+	        	);
 
+				$('#weather > figure.face.front > i').click(function(event) {
+				    $(this).parent().parent().addClass('flipped');
+				});
+
+				$('#weather > figure.face.back > form > button').click(function(e) {
+					e.preventDefault();
+				});
 			}
-
-
-
 	    });
+
+
 
 	    </script>
 
