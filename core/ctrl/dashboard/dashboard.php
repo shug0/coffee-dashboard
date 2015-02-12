@@ -26,7 +26,7 @@
 
 	        // METEO
 
-	        var city = 'Bordeaux'; //$('input[name="ville"]').val();
+	        var city = 'Vancouver'; //$('input[name="ville"]').val();
 
 			if (city) {
 
@@ -50,15 +50,20 @@
 
 			function initWeatherWidget(weather, forecast) {
 
-				var DOMstart = "<li id='weather'><header></header>";
-				var icon = "<div class='half'><img src='assets/modules/weather/" + weather.weather[0].icon + ".svg'></div>";
-				var temp = "<div class='half temp'>" + Math.round(getCelsius(weather.main.temp)) + "</div>";
-				var description = weather.weather[0].description;
-				var ville = weather.name;
-				var DOMend = "</li>";
+				var start = '<li id="weather">',
+					FRONTstart = "<figure class='front><header></header>",
+					icon = "<div class='half'><img src='assets/modules/weather/" + weather.weather[0].icon + ".svg'></div>",
+					temp = "<div class='half temp'>" + Math.round(getCelsius(weather.main.temp)) + "°</div>",
+					descriptionNice = weather.weather[0].description.charAt(0).toUpperCase() + weather.weather[0].description.substring(1).toLowerCase(),
+					description = "<div class='full description'>" + descriptionNice + "</div>",
+					ville = "<div class='full description'>" + weather.name + "</div>",
+					FRONTend = "</figure>",
+					BACKstart = "<figure class='back'>",
+					BACKend = "</figure>",
+					end = "</li>";
 
+	        	gridster.add_widget(start+FRONTstart+icon+temp+description+ville+FRONTend+end, 3, 3);
 
-	        	gridster.add_widget(DOMstart+icon+temp+description+ville+DOMend, 3, 2);
 			}
 
 
