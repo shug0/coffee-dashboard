@@ -239,8 +239,8 @@ strong {
 
 /* line 20, D:/Dev/www/coffee-dashboard/assets/sass/_components/animation */
 body {
-  -webkit-perspective: 1000;
-          perspective: 1000; }
+  -webkit-perspective: 800;
+          perspective: 800; }
 
 /* line 24, D:/Dev/www/coffee-dashboard/assets/sass/_components/animation */
 .appear {
@@ -345,8 +345,8 @@ aside {
       cursor: pointer; }
   /* line 67, D:/Dev/www/coffee-dashboard/assets/sass/_pages/dashboard.scss */
   .gridster .card.flipped {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg); }
+    -webkit-transform: rotateY(-180deg) translateY(-20px) scale(1.08);
+            transform: rotateY(-180deg) translateY(-20px) scale(1.08); }
   /* line 71, D:/Dev/www/coffee-dashboard/assets/sass/_pages/dashboard.scss */
   .gridster .card {
     -webkit-transform-style: preserve-3d; }

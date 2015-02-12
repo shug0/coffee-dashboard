@@ -5,6 +5,10 @@ function changingPage() {
 function enterPage() {
   $('main').css('opacity', '1');
 }
+
+
+
+
 // POSITION
 
 // ADJUST HORIZONTAL & VERTICAL CENTER ♥
@@ -56,7 +60,8 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 jQuery(document).ready(function($) {
 
 	enterPage();
-	
+
+
 });
 
 

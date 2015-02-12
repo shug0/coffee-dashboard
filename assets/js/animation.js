@@ -5,3 +5,6 @@ function changingPage() {
 function enterPage() {
   $('main').css('opacity', '1');
 }
+
+
+

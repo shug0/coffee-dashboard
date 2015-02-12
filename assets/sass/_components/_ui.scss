@@ -45,8 +45,15 @@ button {
 	border-radius: 5px;
 	overflow: hidden;
 	cursor: pointer;
-	&.blue { background: $colorBlue; }
-	&.green { background: $colorGreen; }
-	&.red { background: $colorRed; }
+	transition: all $animationEasing 0.2s;
+	&.blue {  background: $colorBlue; 
+		&:hover { background: lighten($colorBlue, 8); }
+	}
+	&.green { background: $colorGreen; 
+	
+	}
+	&.red {   background: $colorRed; 
+	
+	}
 }
 

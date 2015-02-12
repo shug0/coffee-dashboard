@@ -79,9 +79,24 @@
 	        		3, 4
 	        	);
 
+
+
+				$('html').click(function(event) {
+					if(!$(event.target).closest('.card').length) {
+				    	$('.card').removeClass('flipped');
+					};
+				});
+
 				$('#weather > figure.face.front > i').click(function(event) {
+					event.stopPropagation();
 				    $(this).parent().parent().addClass('flipped');
 				});
+
+
+
+
+
+
 
 				$('#weather > figure.face.back > form > button').click(function(e) {
 					e.preventDefault();
