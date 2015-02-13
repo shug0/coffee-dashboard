@@ -33,4 +33,8 @@
 		bottom: 30px;
 		left: 30px;
 	}
+	#messageOptionVille {
+		opacity: 0;
+		transition: all 0.3s $animationEasing;
+	}
 }

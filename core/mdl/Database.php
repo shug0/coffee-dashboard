@@ -30,7 +30,7 @@ class Database {
                 $stmt = $this->datab->prepare($query); 
                 $stmt->execute($params);
                 return $stmt->fetch();  
-                }catch(PDOException $e){
+            }catch(PDOException $e){
                 echo 'Erreur :' . $e;
                 throw new Exception($e->getMessage());
             }

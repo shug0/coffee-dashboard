@@ -65,7 +65,7 @@ aside {
 		}
 	}
 	.card.flipped { 
-		transform: rotateY(-180deg) translateY(-20px) scale(1.2);
+		transform: rotateY(-180deg) translateY(-20px) ;
 		@extend .level6; 
 	}
 	.card {	
@@ -84,12 +84,10 @@ aside {
 	.card .front {
 		z-index: 1;
 		background: white;
-		color: white;
 	}
 	.card .back {
 		-webkit-transform: rotateY(-180deg);
 		background: white;
-		color: black;
 	}
 }
 

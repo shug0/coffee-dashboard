@@ -9,7 +9,6 @@ class User
  	public function __construct ($db, $pseudo, $pwd) 
  	{
 		$this->db = $db;
-
  		$this->pseudo = $pseudo;
  		$this->pwd = $pwd;
  	}

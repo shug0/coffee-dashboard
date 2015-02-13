@@ -23,47 +23,39 @@ if ($db->isConnected)
 				if (empty($_POST['city'])) {
 					echo "empty";
 				}
-				else {
-					
+				else {	
+
 					$newCity = $_POST['city'];
-					$cityInDb = $db->getRow('SELECT option_value FROM options WHERE option_name=city');
-		
+					$cityInDb = $db->getRow('SELECT option_value FROM options WHERE option_name="city"');
+					$params = array(
+					 	':name' => 'city',
+						':value' => $newCity 
+					);
+
 					// Si n'est pas présent en DB -> AJOUT
 					if (empty($cityInDb)) {
 						if ($db->insertRow(
 							'INSERT INTO options (option_name, option_value) 
-							 VALUES (:name,:value)',
-							 array(
-							 	':name' => 'city',
-							 	':value' => $newCity 
-							 ))) 
+							 VALUES (:name,:value)', $params)) 
 				 		{
-				 			echo "La ville à été enregistré";
-				 		}
-				 		else {
-							echo "Erreur lors de l'ajout";
+				 			echo "sucess";
 				 		}
 					}
 					// PRESENT EN DB -> UPDATE
 					else {
 						// Si la nouvelle ville n'est pas la même
-						if ($cityInDb == $newCity ) {
-							echo "La ville est la même";
+						if ($cityInDb['option_value'] == $newCity ) {
+							echo "sameCity";
 						}
 						else {
 							$db->updateRow(
 								'UPDATE options 
 								 SET option_value = :value
-								 WHERE option_name = :name',
-								 array(
-								 	':name' => 'city',
-								 	':value' => $newCity 
-								)
-							);
+								 WHERE option_name = :name', $params);
+							echo "sucess";
 						}
 					}
 				}
-
 			break;
 			
 			default:

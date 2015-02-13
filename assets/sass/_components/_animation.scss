@@ -21,15 +21,21 @@ body {
   perspective: 800;
 }
 
-.appear {
+.jAnim-fading {
   opacity: 0;
-  margin-top: -20px;
-  transition: all ease-in-out 0.4s;
+  margin-top: -40px;
 }
 
-.reveal {
+.jAnim-fading-show {
   opacity: 1;
-  margin-top: 0;
+  margin-top: 0px;
 }
 
-
+.jAnim-flip-show {
+  -moz-transform: translateY(0px) rotateX(0deg) !important;
+  -webkit-transform: translateY(0px) rotateX(0deg) !important;
+  -o-transform: translateY(0px) rotateX(0deg) !important;
+  -ms-transform: translateY(0px) rotateX(0deg) !important;
+  transform: translateY(0px) rotateX(0deg) !important;
+   opacity: 1 !important;
+}

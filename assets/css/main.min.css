@@ -247,16 +247,21 @@ body {
           perspective: 800; }
 
 /* line 24, D:/Dev/www/coffee-dashboard/assets/sass/_components/animation */
-.appear {
+.jAnim-fading {
   opacity: 0;
-  margin-top: -20px;
-  -webkit-transition: all ease-in-out 0.4s;
-          transition: all ease-in-out 0.4s; }
+  margin-top: -40px; }
 
-/* line 30, D:/Dev/www/coffee-dashboard/assets/sass/_components/animation */
-.reveal {
+/* line 29, D:/Dev/www/coffee-dashboard/assets/sass/_components/animation */
+.jAnim-fading-show {
   opacity: 1;
-  margin-top: 0; }
+  margin-top: 0px; }
+
+/* line 34, D:/Dev/www/coffee-dashboard/assets/sass/_components/animation */
+.jAnim-flip-show {
+  -webkit-transform: translateY(0px) rotateX(0deg) !important;
+  -ms-transform: translateY(0px) rotateX(0deg) !important;
+  transform: translateY(0px) rotateX(0deg) !important;
+  opacity: 1 !important; }
 
 /* line 3, D:/Dev/www/coffee-dashboard/assets/sass/_pages/login.scss */
 #login {
@@ -349,8 +354,8 @@ aside {
       cursor: pointer; }
   /* line 67, D:/Dev/www/coffee-dashboard/assets/sass/_pages/dashboard.scss */
   .gridster .card.flipped {
-    -webkit-transform: rotateY(-180deg) translateY(-20px) scale(1.2);
-            transform: rotateY(-180deg) translateY(-20px) scale(1.2); }
+    -webkit-transform: rotateY(-180deg) translateY(-20px);
+            transform: rotateY(-180deg) translateY(-20px); }
   /* line 71, D:/Dev/www/coffee-dashboard/assets/sass/_pages/dashboard.scss */
   .gridster .card {
     -webkit-transform-style: preserve-3d; }
@@ -367,13 +372,11 @@ aside {
   /* line 84, D:/Dev/www/coffee-dashboard/assets/sass/_pages/dashboard.scss */
   .gridster .card .front {
     z-index: 1;
-    background: white;
-    color: white; }
-  /* line 89, D:/Dev/www/coffee-dashboard/assets/sass/_pages/dashboard.scss */
+    background: white; }
+  /* line 88, D:/Dev/www/coffee-dashboard/assets/sass/_pages/dashboard.scss */
   .gridster .card .back {
     -webkit-transform: rotateY(-180deg);
-    background: white;
-    color: black; }
+    background: white; }
 
 @font-face {
   font-family: 'Material Design Iconic Font';
@@ -3547,6 +3550,11 @@ aside {
   position: absolute;
   bottom: 30px;
   left: 30px; }
+/* line 36, D:/Dev/www/coffee-dashboard/assets/sass/_widget/weather.scss */
+#weather #messageOptionVille {
+  opacity: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
 
 /*! gridster.js - v0.5.6 - 2014-09-25
 * http://gridster.net/
