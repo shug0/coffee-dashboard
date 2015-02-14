@@ -21,7 +21,19 @@
 
 			jQuery(document).ready(function($) {
 
+				// Animation Cards
 				$('#content>div>ul').jAnim({"animation": "fading"});
+
+				// Fennetre options utilisateurs 
+				$('.avatarZone').click(function(event) {
+					event.stopPropagation();
+					$('.optionUser').addClass('show');
+				});
+				$('html').click(function(event) {
+					if(!$(event.target).closest('.avatarZone').length) {
+				    	$('.optionUser').removeClass('show');
+					};
+				});
 
 				// ----------- GRIDSTER INIT ----------- \\
 		        var gridster = $("#content > div > ul").gridster({

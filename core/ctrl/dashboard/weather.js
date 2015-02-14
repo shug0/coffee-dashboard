@@ -6,7 +6,7 @@ function listeners() {
 		event.stopPropagation();
 	    $(this).parent().parent().addClass('flipped');
 	});
-	$('html').off().click(function(event) {
+	$('html').click(function(event) {
 		if(!$(event.target).closest('.card').length) {
 	    	$('.card').removeClass('flipped');
 		};

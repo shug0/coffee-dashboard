@@ -20,7 +20,6 @@
 					<li class="md-dashboard"><a href="?p=dashboard">Tableau de bord</a></li>
 					<li class="md-people"><a href="?p=users">Utilisateurs</a></li>
 					<li class="md-settings"><a href="?p=settings">Paramètres</a></li>
-					<li class="md-logout"><a href="core/ctrl/user/logout.php">Déconnexion</a></li>
 				</ul>
 			</nav>
 		</aside>
