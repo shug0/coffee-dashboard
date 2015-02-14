@@ -19,30 +19,40 @@
 		<script type="text/javascript">
 
 			jQuery(document).ready(function($) {
-				$('#content>div>ul').jAnim({"animation": "fading"});
-			});
 
-			$(function(){
+				$('#content>div>ul').jAnim({"animation": "fading"});
 
 				// ----------- GRIDSTER INIT ----------- \\
 		        var gridster = $("#content > div > ul").gridster({
 		          widget_base_dimensions: [100, 100],
 		          widget_margins: [10, 10],
-		          draggable: {
-		            handle: "header"
-		          }
+		          draggable: { handle: "header" }
 		        }).data("gridster");
 
 
-				// ----------- WEATHER INIT ----------- \\
-				var city = '<?php echo $city ?>';
+		        // ----------- INIT LISTENERS ----------- \\
+				function listeners() {
+					$('.optionCard').off().click(function(event) {
+						event.stopPropagation();
+					    $(this).parent().parent().addClass('flipped');
+					});
+					$('html').off().click(function(event) {
+						if(!$(event.target).closest('.card').length) {
+					    	$('.card').removeClass('flipped');
+						};
+					});
+					$('#weather > figure.face.back > form > button').off().click(function(e) {
+						e.preventDefault();
+						new_ville_construct();
+					});
+				}
 
 				function getWeatherDataFor(city, callback) 
 				{
 					$.post('http://api.openweathermap.org/data/2.5/weather?lang=fr&q=' + city,
 						function(data, ajaxfinished) {
 							var weather = data;
-							if (data.cod!=='404') {
+							if (weather.cod!=='404') {
 								var start = '',
 								FRONTstart = "<figure class='face front'><header></header>",
 								icon = "<div class='half'><img class='weatherIcon' src='assets/modules/weather/" + weather.weather[0].icon + ".svg'></div>",
@@ -66,32 +76,10 @@
 							}
 						}
 					);
-				};	
+				}
 
-
-				// CREATE WIDGET
-				getWeatherDataFor(city, function(result){
-
-					if($('#weather').length==0) {
-						gridster.add_widget('<li class="jAnim-fading card" id="weather"></li>', 3, 3);
-					}
-
-					$('#weather').html(result);
-					initFlipCard();
-					onClickCity();
-
-					$('#weather > figure.face.back > form > button').click(function(e) {
-						launch();
-						e.preventDefault();
-						init_new_ville();
-					});
-
-				});
-
-
-
-				function init_new_ville() {
-
+				function new_ville_construct() 
+				{
 					var city = $('#weather>figure.face.back>form>input').val();
 					$.post(
 						'<?php echo URL_WEB . "core/ctrl/dashboard/dashboard_actions.php" ?>',
@@ -112,11 +100,11 @@
 						    	
 						    	case 'sucess':		
 									getWeatherDataFor($('#city').val(), function(result) {
- 										$('#weather').html(result);
-										initFlipCard();
+										$('#weather').html(result);
 						 				setTimeout(function() {
 					 						$('#weather').removeClass('flipped');
 										}, 200);
+										listeners();
 									});
 						    	break;
 
@@ -128,18 +116,34 @@
 							}
 						}
 					);
+				}	
+
+
+				function constructWeatherWidget() {
+					var city = '<?php echo $city ?>';
+					getWeatherDataFor(city, function(result){
+						gridster.add_widget('<li class="jAnim-fading card" id="weather">'+result+'</li>', 3, 3);
+						listeners();
+
+						gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',1,1);
+			   			gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',1,2);
+			   			gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',2,2);
+			   			gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',1,1);
+			   			gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',2,2);
+			   			gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',1,2);
+
+					});					
 				}
-		    });
+
+				constructWeatherWidget();
+
+
+
+			});
+
 
 	    </script>
 
 	<?php  }} // END SECURED AREA
-
-	        		//gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',1,1);
-	        		//gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',1,2);
-	        		//gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',2,2);
-	        		//gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',1,1);
-	        		//gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',2,2);
-	        		//gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',1,2);
 
 ?>
