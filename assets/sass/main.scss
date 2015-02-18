@@ -21,6 +21,7 @@
 	@import "_pages/default.scss";
 	@import "_pages/login.scss";
 	@import "_pages/dashboard.scss";
+	@import "_pages/users.scss";
 
 // ------ FONTS MATERIAL ----- \\
 
@@ -35,3 +36,7 @@
 
 	@import "_plugins/gridster.scss";
 
+
+// ------ RESPONSIVE ----- \\
+
+	@import "_components/responsive";  

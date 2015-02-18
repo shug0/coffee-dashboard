@@ -13,16 +13,28 @@
 
 	<?php if (isset($_SESSION['session'])): ?>
 
-		<aside>
+		<i class='md-menu'></i>
+		<aside id='sidebar'>
 			<h1><img src="assets/img/logo_white_sidebar.png" alt=""></h1>
 			<nav>
 				<ul>
-					<li class="md-dashboard"><a href="?p=dashboard">Tableau de bord</a></li>
-					<li class="md-people"><a href="?p=users">Utilisateurs</a></li>
-					<li class="md-settings"><a href="?p=settings">Paramètres</a></li>
+					<a href="?p=dashboard"><li class="md-dashboard"><span>Tableau de bord</span></li></a>
+					<a href="?p=users"><li class="md-people"><span>Utilisateurs</span></li></a>
+					<a href="?p=settings"><li class="md-settings"><span>Paramètres</span></li></a>
 				</ul>
 			</nav>
+
+			<div id="userInfo">
+				<h3><p><?php echo $_SESSION['user']['user_firstname'] . "</p><p>" . $_SESSION['user']['user_lastname']; ?></p></h3>
+				<img id='avatar' class='face front' src="uploads/users/<?php echo $_SESSION['user']['ID'] ?>/avatar.gif" alt="">
+				<ul class="optionUser">
+					<a href="core/ctrl/user/logout.php"><li class="md-user">Déconnexion</li></a>
+				</ul>
+			</div>
+
 		</aside>
+
+
 
 	<?php endif ?>
 

@@ -22,24 +22,12 @@
 			jQuery(document).ready(function($) {
 
 				// Animation Cards
-				$('#content>div>ul').jAnim({"animation": "fading"});
-
-				// Fennetre options utilisateurs 
-				$('.avatarZone').click(function(event) {
-					event.stopPropagation();
-					$('.optionUser').addClass('show');
-				});
-				$('html').click(function(event) {
-					if(!$(event.target).closest('.avatarZone').length) {
-				    	$('.optionUser').removeClass('show');
-					};
-				});
+				$('.content>div>ul').jAnim({"animation": "fading"});
 
 				// ----------- GRIDSTER INIT ----------- \\
-		        var gridster = $("#content > div > ul").gridster({
-		          widget_base_dimensions: [100, 100],
+		        var gridster = $(".content > div > ul").gridster({
+		          widget_base_dimensions: [80, 80],
 		          widget_margins: [10, 10],
-		          draggable: { handle: "header" }
 		        }).data("gridster");
 
 				var city = '<?php echo $city ?>';

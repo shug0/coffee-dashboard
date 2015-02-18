@@ -57,3 +57,125 @@ button {
 	}
 }
 
+i.md-menu {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 500;
+	color: white;
+	font-size: 1.8em;
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 50%;
+	padding: 10px;
+}
+
+#sidebar {
+	top: -50px;
+	z-index: 999;
+	position: fixed;
+	height: calc(100% + 50px);
+	width: $sidebarWidth;
+	padding-top: 50px;
+	background: white;
+	transition: all 0.3s ease-out;
+	&.show { left: 0px; }
+	@extend .level4; 
+	h1 {
+		background: url(../img/background_logo_sidebar.jpg);
+		height: 144px;
+		text-align: center;
+		padding: 18px 0;
+		margin-bottom: 40px;
+		img {
+			width: 80%;
+			max-width: 100px;
+			height: auto;
+			display: inline-block;
+		}
+	}
+	nav {
+		span {
+			color: $colorText;
+			font-family: $fontDefault;
+			font-weight: 400;
+			font-size: 1.1em;
+			display: block;
+			margin: -21px 0 0 70px;
+		}
+		ul { 
+			li { margin-bottom: 30px; }
+			li:before {
+				margin-right: 15px;
+				color: $colorText;
+				font-size: 1.6em;
+				padding: 20px;
+			}
+		}		
+	}
+}
+
+#userInfo {
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 80px;
+	display: block;
+	position: absolute;
+	background-color: lighten($colorGrayLighter, 50);
+	h3 {
+		font-size: 1.1em;
+		position: absolute;
+		top: 20px;
+		left: 30px;
+	}
+	h3, #avatar { float: left; }
+	#avatar {
+		position: absolute;
+		right: 30px;
+		top: 15px;
+		height: 50px;
+		width: 50px;
+		cursor: pointer;
+		margin-left: 30px;
+		border-radius: 50%;
+	}
+	.optionUser {
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		top: 10px;
+		left: $sidebarWidth;
+		@extend .level3;
+		background-color: white;
+		z-index: 999;
+		width: 200px;
+		a {
+			width: 100%;
+			display: block;
+			color: $colorText;
+			padding: 20px;
+			li { font-family: $fontDefault; }
+		}
+		transition: all 0.3s $animationEasing;
+	}
+	.optionUser.show {
+		opacity: 1;
+		visibility: visible;
+		left: $sidebarWidth + 40px;
+	}
+	.optionUser:before {
+		position: absolute;
+		top: 10px;
+		left: -20px;
+		width: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 20px 20px 20px 0;
+		border-color: transparent white transparent transparent;
+		content: "";
+	}
+
+}
+
+.content { margin: 50px 50px 0 280px; }

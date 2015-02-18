@@ -7,9 +7,9 @@ class Session
  	public function __construct($pseudo, $pwd) 
  	{
 		$db = new Database();
-		$hashUserInDB = $db->getRow('SELECT user_pass FROM users WHERE user_login = :pseudo', array(':pseudo' => $pseudo));
+		$user = $db->getRow('SELECT * FROM users WHERE user_login = :pseudo', array(':pseudo' => $pseudo));
 
-		if (PassHash::check_password($hashUserInDB['user_pass'], $pwd)) {
+		if (PassHash::check_password($user['user_pass'], $pwd)) {
 
 			$newHash = PassHash::hash($pwd);
 			$db->updateRow(
@@ -21,6 +21,7 @@ class Session
 			 	':password' => $newHash 
 			 ));
 
+			$_SESSION['user'] = $user;
 			$_SESSION['pseudo'] = $pseudo;
 	        $_SESSION['hash'] = $newHash;
 			$this->is_logged = true; 			
@@ -33,9 +34,9 @@ class Session
 		if (isset($_SESSION['pseudo']) and isset($_SESSION['hash'])) 
 		{
 			$db = new Database();
-			$hashUserInDB = $db->getRow('SELECT user_pass FROM users WHERE user_login = :pseudo', array(':pseudo' => $_SESSION['pseudo']));
+			$user = $db->getRow('SELECT user_pass FROM users WHERE user_login = :pseudo', array(':pseudo' => $_SESSION['pseudo']));
 
-    		if ($_SESSION['hash'] == $hashUserInDB['password'] ) 
+    		if ($_SESSION['hash'] == $user['password'] ) 
     		{
     			return true;
     			$db->Disconnect();

@@ -25,13 +25,13 @@ function constructWeatherWidget(city, gridster, ajaxSrc) {
 		gridster.add_widget('<li class="jAnim-fading card" id="weather">'+result+'</li>', 3, 3);
 		listeners();
 
-		gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',1,1);
-		gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',1,2);
-		gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',2,2);
-		gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',1,1);
-		gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',2,2);
-		gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',1,2);
-
+		//gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',1,1);
+		//gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',1,2);
+		//gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',2,2);
+		//gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',1,1);
+		//gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',2,2);
+		//gridster.add_widget('<li class="jAnim-fading card" style="background:white"><header></header>Hello you</li>',1,2);
+//
 	});					
 }
 

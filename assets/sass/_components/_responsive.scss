@@ -25,7 +25,34 @@ $huge: 1920px;
 }
 
 @media (max-width: 980px) {
-
+	#sidebar {
+		width: 70px;
+		left: -70px;
+		h1 {
+			height: 95px;
+		}
+		h3 {
+			display: none;
+		}
+		#avatar {
+			right: 12px;
+		}
+		a span {
+			display: none;
+		}
+		.optionUser.show {
+			left: 105px;
+		}
+		.optionUser {
+			left: 70px;
+		}
+	}
+	.content {
+		margin: 50px 0 0 0;;
+	}
+	.gridster .card .face {
+		width: auto;
+	}
 }
 
 @media (max-width: 1280px) {
