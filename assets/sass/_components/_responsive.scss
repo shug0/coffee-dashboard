@@ -12,8 +12,11 @@ $huge: 1920px;
 
 }
 
-@media (max-width: 640px) {
-
+@media (max-width: 500px) {
+	#sidebar {
+		left: -70px;
+		width: 80px;
+	}
 }
 
 @media (max-width: 768px) {

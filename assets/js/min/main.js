@@ -6,6 +6,11 @@ function changingPage() {
 
 function enterPage() {
   $('main').css('opacity', '1');
+
+	if ($(document).width() > 500) {
+  		$('#sidebar').addClass('show');
+	}
+
 }
 
 
@@ -124,10 +129,11 @@ jQuery(document).ready(function($) {
 
 jQuery(document).ready(function($) {
 	
+	var sidebar = $('#sidebar');
 
 	$('.md-menu').click(function(event) {
 		event.stopPropagation();
-		$('#sidebar').addClass('show');
+		sidebar.addClass('show');
 	});
 
 
@@ -137,10 +143,13 @@ jQuery(document).ready(function($) {
 	});
 
 	$('html').click(function(event) {
-		if(!$(event.target).closest('#sidebar').length) {
-			$('#sidebar').removeClass('show');
 
+		if ($(document).width() < 500) {
+			if(!$(event.target).closest('#sidebar').length) {
+				sidebar.removeClass('show');
+			};
 		};
+
 		if(!$(event.target).closest('.avatarZone').length) {
 	    	$('.optionUser').removeClass('show');
 		};

@@ -209,6 +209,7 @@ i.md-menu {
   z-index: 999;
   position: fixed;
   height: calc(100% + 50px);
+  left: -250px;
   width: 250px;
   padding-top: 50px;
   background: white;
@@ -2879,6 +2880,11 @@ strong {
   opacity:0;
 }
 */
+@media (max-width: 500px) {
+  #sidebar {
+    left: -70px;
+    width: 80px; } }
+
 @media (max-width: 980px) {
   #sidebar {
     width: 70px;

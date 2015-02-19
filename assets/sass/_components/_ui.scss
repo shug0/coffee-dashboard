@@ -74,6 +74,7 @@ i.md-menu {
 	z-index: 999;
 	position: fixed;
 	height: calc(100% + 50px);
+	left: $sidebarWidth - $sidebarWidth*2;
 	width: $sidebarWidth;
 	padding-top: 50px;
 	background: white;
